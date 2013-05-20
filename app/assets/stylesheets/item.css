@@ -1,0 +1,22 @@
+
+  .title {
+      font-size: 10pt;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  .title{
+      color: darkcyan;
+  }
+
+  .description{
+      margin-bottom: 10px;
+  }
+
+  .price{
+      color: darkcyan;
+      font-size: 10pt;
+      text-align: right;
+  }
+
+

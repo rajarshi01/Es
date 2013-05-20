@@ -1,0 +1,47 @@
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/demo.css" />
+  <link rel="stylesheet" type="text/css" href="assets/newstyle.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/item.css" />
+
+  <style type="text/css">
+      h1{text-align:center;font-size:54px;font-family:Times,serif;font-variant:small-caps;color:#330066;}
+      h2{text-align:left;font-size:28px;font-family:Times,serif;font-variant:small-caps;color:#330066;}
+  </style>
+</head>
+
+
+
+<div id="container_demo" >
+  <div class="wrapper">
+    <div class="show">
+
+
+        <h2>Choose from our wide variety</h2>
+
+
+      <table width="500" >
+         <tr>
+           <td><img src="/assets/red.png" height="200" width="200"><br><u><%= link_to 'Levis 101',:controller => :items, :action => :index %></u></td>
+           <td><img src="/assets/blue.png"  height="200" width="200"><br><u><%= link_to 'Allen Solly',:controller => :items, :action => :index %></u></td>
+         </tr>
+        <tr>
+          <td><img src="/assets/mint.png" height="200" width="200"><br><u><%= link_to 'Gucci',:controller => :items, :action => :index %></u></td>
+          <td><img src="/assets/hotpink.png"  height="200" width="200"><br><u><%= link_to 'Armani',:controller => :items, :action => :index %></u></td>
+        </tr>
+        <tr>
+          <td><img src="/assets/gray.png" height="200" width="200"><br><u><%= link_to 'Hugo',:controller => :items, :action => :index %></u></td>
+          <td><img src="/assets/mustard.png"  height="200" width="200"><br><u><%= link_to 'Adidas',:controller => :items, :action => :index %></u></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div >
+</html>
+
+

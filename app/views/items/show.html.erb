@@ -1,0 +1,51 @@
+ <html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/demo.css" />
+  <link rel="stylesheet" type="text/css" href="assets/newstyle.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/animate-custom.css" />
+  <style type="text/css">
+      h1{text-align:center;font-size:54px;font-family:Times,serif;font-variant:small-caps;color:#330066;}
+  </style>
+</head>
+<body>
+
+
+<div id="container_demo" >
+  <a class="hiddenanchor" id="tologin"></a>
+  <div id="wrapper">
+    <div id="show" class="animate form">
+      <%= form_for(@item) do |f| %>
+
+
+          <div class="field">
+            <%= notice %>
+          </div>
+          <div class="field">
+            <b>Title:</b>
+            <%= @item.title %>
+          </div>
+          <div class="field">
+            <b>Description:</b>
+            <%= @item.description %>
+          </div>
+          <div class="field">
+            <b>Price:</b>
+            <%= @item.price %>
+          </div>
+
+          <div class="actions">
+            <%= link_to 'Edit', edit_item_path(@item) %> |
+            <%= link_to 'Back', items_path %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+

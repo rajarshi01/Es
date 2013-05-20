@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>RailsDependency</ID>
+  <OriginalElement>#Eshop</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">User</node>
+    <node x="101.0" y="0.0">Item</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="78.5" y="14.0" />
+  <SelectedNodes>
+    <node>User</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Own fields</Category>
+    <Category>System DB fields</Category>
+    <Category>Migration fields</Category>
+    <Category>Association fields</Category>
+  </Categories>
+</Diagram>
+

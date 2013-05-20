@@ -1,0 +1,63 @@
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="assets/demo.css" />
+  <link rel="stylesheet" type="text/css" href="assets/newstyle.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/item.css" />
+
+  <style type="text/css">
+      h1{text-align:center;font-size:54px;font-family:Times,serif;font-variant:small-caps;color:#330066;}
+  </style>
+</head>
+
+
+
+<div id="container_demo" >
+<div class="wrapper">
+  <div class="show">
+
+
+
+
+    <table width="500" border="1">
+      <thead>
+      <tr>
+        <th><b>Image</b></th>
+        <th><b>Title</b></th>
+        <th><b>Description</b></th>
+        <th><b>Price</b></th>
+        <% if current_user.admin? %>
+        <th><b>Links</b></th>
+        <% end %>
+        <th><b>Buy</b></th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @items.each do |item| %>
+          <tr>
+
+            <td ><%=  image_tag(item.image) %></td>
+            <td class="title"><%= link_to item.title, item %></td>
+            <td class="description"><%= item.description %></td>
+            <td class="price"><%= number_to_currency item.price, :unit => "&euro;"  %></td>
+            <% if current_user.admin? %>
+
+            <td><u><b><%= link_to 'Show', item %></b> </u><u><b><%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %></b> </u><u><b><%= link_to 'New', new_item_path %></b></u></td>
+            <% end %>
+
+            <td><u><b><%= link_to "ViewCart", :controller => :cart, :action => :index %></b></u>|<u><b><%=  link_to "Add", :controller => :cart, :action => :add, :id => item %></b></u></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+  </div >
+<br />
+
+

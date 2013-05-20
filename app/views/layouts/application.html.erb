@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Shop With Us</title>
+  <%= stylesheet_link_tag    "application", :media => "screen" %>
+
+  <%= javascript_include_tag "application" %>
+
+  <%= csrf_meta_tags %>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+<body>
+<header>
+  <h1 text-align='center'>Shop With Us</h1>
+</header>
+<nav>
+  <%= render :partial => 'shared/navigation' %>
+</nav>
+<section id="intro">
+  <header>
+    <h2>Shop With Us -The Best Online Shopping Portal.</h2>
+  </header>
+  <h3>Welcome <%= current_user.email if user_signed_in? %></h3>
+
+</section>
+<div id="content">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+<%= yield %>
+  </div>
+  <aside>
+
+
+
+
+    <section>
+      <header>
+        <h3>Like Us!!</h3>
+        </header>
+      <%= things_to_do('Facebook' => 'http://www.facebook.com',
+                       'Twitter' => 'http://www.twitter.com') %>
+
+    </section>
+
+    <section>
+      <header>
+        <h3>Recent Articles</h3>
+      </header>
+
+        <%= things_to_do('How To Ensure The Best Fit' => 'http://www.guystyleguide.com/blog/2011/09/the-ultimate-mens-clothing-fit-guide/',
+                         'This Year Hot Colors!' => 'http://www.nytimes.com/2013/03/28/fashion/electric-blue-is-the-spring-look-for-men.html?_r=0') %>
+
+         </section>
+
+  </aside>
+
+  <footer>
+    <br />
+    <p>&copy; 2013 <a href="#" title="Shop With Us">shopwithus.com</a></p>
+  </footer>
+
+</body>
+</html>

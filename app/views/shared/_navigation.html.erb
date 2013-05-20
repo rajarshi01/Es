@@ -1,0 +1,16 @@
+<ul>
+  <li><%= link_to_unless_current "Home", page_home_path  %></li>
+  <li><%= link_to_unless_current "About Us", page_about_path  %></li>
+  <li><%= link_to_unless_current "Products", items_path  %></li>
+  <li><%= link_to_unless_current "Contact", page_contact_path  %></li>
+
+  <% if user_signed_in? %>
+      <li>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      </li>
+  <% else %>
+      <li>
+        <%= link_to('Login', new_user_session_path)  %>
+      </li>
+  <% end %>
+</ul>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4190864383">
+    <data-source source="LOCAL" name="Rails Webshopping: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="a0599b6e-8ed8-4a0f-8256-532e48a7cc5a">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Webshopping\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
